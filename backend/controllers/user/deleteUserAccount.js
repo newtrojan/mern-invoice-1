@@ -9,7 +9,11 @@ const deleteUserAccount = asyncHandler(async (req, res) => {
 	const user = await User.findById(req.params.id);
 
 	if (user) {
+
+
+
 		const result = await user.deleteOne(); //remove() is deprecated
+
 
 		res.json({
 			success: true,
